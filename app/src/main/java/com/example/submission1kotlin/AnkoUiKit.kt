@@ -1,6 +1,7 @@
 package com.example.submission1kotlin
 
 import android.content.Context
+import android.graphics.Typeface
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -23,8 +24,8 @@ class AnkoUiKit : AnkoComponent<MainActivity> {
 }
 
 class ListAnko : AnkoComponent<Context>{
-    var image: ImageView? = null
-    var name: TextView? = null
+    lateinit var image: ImageView
+    lateinit var name: TextView
     override fun createView(ui: AnkoContext<Context>): View = with(ui) {
         linearLayout{
             orientation = LinearLayout.VERTICAL
@@ -39,13 +40,14 @@ class ListAnko : AnkoComponent<Context>{
             textView {
                 id = Ids.name
                 textSize = sp(20).toFloat()
+                typeface = Typeface.DEFAULT_BOLD
             }.lparams(width = wrapContent, height = wrapContent){
                 topMargin = dip(30)
             }
         }
     }
 
-    object Ids {
+    companion object Ids {
         const val image = 1
         const val name = 2
     }
