@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Submission 1 Kotlin</string>
+    <string name="app_name">Footballer</string>
 
     <string-array name="club_name">
         <item>Barcelona FC</item>
