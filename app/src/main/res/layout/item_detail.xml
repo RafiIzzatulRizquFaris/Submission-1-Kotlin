@@ -9,7 +9,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
-        android:src="@drawable/img_acm"
+        android:src="@drawable/french_ligue_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
