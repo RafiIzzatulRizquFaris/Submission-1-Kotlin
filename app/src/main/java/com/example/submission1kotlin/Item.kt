@@ -4,6 +4,6 @@ import android.media.Image
 
 class Item (
     val name: String?,
-    val image: Int?,
-    val desc: String?
-)
+    val desc: String?,
+    val image: Int?
+    )
