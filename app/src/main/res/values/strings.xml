@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Footballer</string>
+    <string name="lorem_ipsum">lorem ipsum dolor si amet</string>
 
     <string-array name="club_name">
         <item>English Premiere League</item>

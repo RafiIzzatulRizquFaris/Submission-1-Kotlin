@@ -26,27 +26,26 @@ class Adapter (private val context: Context, private val items: List<Item>, priv
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position], listener)
-        setAnimation(holder.itemView, position)
-
+//        setAnimation(holder.itemView, position)
     }
 
-    private fun setAnimation(itemView: View, i: Int) {
-        var i = i
-        if (!onAttach) {
-            i = -1
-        }
-        val isNotFirstItem = i == -1
-        i ++
-        itemView.translationX = itemView.x
-        itemView.alpha = 0f
-        val animatorSet = AnimatorSet()
-        val animator = ObjectAnimator.ofFloat(itemView, "alpha", 0f, 1.0f, 2.0f)
-        ObjectAnimator.ofFloat(itemView, "alpha", 0f).start()
-        animator.startDelay = if (isNotFirstItem) duration / 2 else i * duration / 3
-        animator.duration = 500
-        animatorSet.play(animator)
-        animator.start()
-    }
+//    private fun setAnimation(itemView: View, i: Int) {
+//        var i = i
+//        if (!onAttach) {
+//            i = -1
+//        }
+//        val isNotFirstItem = i == -1
+//        i ++
+//        itemView.translationX = itemView.x
+//        itemView.alpha = 0f
+//        val animatorSet = AnimatorSet()
+//        val animator = ObjectAnimator.ofFloat(itemView, "alpha", 0f, 1.0f, 2.0f)
+//        ObjectAnimator.ofFloat(itemView, "alpha", 0f).start()
+//        animator.startDelay = if (isNotFirstItem) duration / 2 else i * duration / 3
+//        animator.duration = 500
+//        animatorSet.play(animator)
+//        animator.start()
+//    }
 
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
