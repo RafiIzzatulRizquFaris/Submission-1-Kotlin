@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.startActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivityUI : AppCompatActivity() {
 
     private lateinit var mainActivity: AnkoUiKit
     private val items: MutableList<Item> = mutableListOf()
@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         mainActivity = AnkoUiKit()
         mainActivity.setContentView(this)
         getData()
-        mainActivity.recycler!!.layoutManager = LinearLayoutManager(this)
-        mainActivity.recycler!!.adapter = Adapter(this, items){
+        mainActivity.recyclerView!!.layoutManager = LinearLayoutManager(this)
+        mainActivity.recyclerView!!.adapter = Adapter(this, items){
             startActivity<DetailActivity>("Detail_key" to items.indexOf(it))
         }
     }

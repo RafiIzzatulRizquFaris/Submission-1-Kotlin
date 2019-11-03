@@ -1,5 +1,7 @@
 package com.example.submission1kotlin
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Typeface
 import android.view.View
@@ -10,13 +12,13 @@ import androidx.recyclerview.widget.RecyclerView
 import org.jetbrains.anko.*
 import org.jetbrains.anko.recyclerview.v7.recyclerView
 
-class AnkoUiKit : AnkoComponent<MainActivity> {
-    var recycler: RecyclerView? = null
+class AnkoUiKit : AnkoComponent<MainActivityUI> {
+    var recyclerView: RecyclerView? = null
 
-    override fun createView(ui: AnkoContext<MainActivity>)= with(ui) {
+    override fun createView(ui: AnkoContext<MainActivityUI>)= with(ui) {
         linearLayout{
             orientation = LinearLayout.VERTICAL
-            recycler =recyclerView {
+            recyclerView = recyclerView {
                 lparams(width = matchParent, height = matchParent)
             }
         }
@@ -28,7 +30,7 @@ class ListAnko : AnkoComponent<Context>{
     lateinit var name: TextView
     override fun createView(ui: AnkoContext<Context>): View = with(ui) {
         linearLayout{
-            orientation = LinearLayout.VERTICAL
+            orientation = LinearLayout.HORIZONTAL
             padding = dip(16)
 
             imageView{
@@ -39,7 +41,7 @@ class ListAnko : AnkoComponent<Context>{
 
             textView {
                 id = Ids.name
-                textSize = sp(20).toFloat()
+                textSize = sp(8).toFloat()
                 typeface = Typeface.DEFAULT_BOLD
             }.lparams(width = wrapContent, height = wrapContent){
                 topMargin = dip(30)
@@ -51,5 +53,4 @@ class ListAnko : AnkoComponent<Context>{
         const val image = 1
         const val name = 2
     }
-
 }

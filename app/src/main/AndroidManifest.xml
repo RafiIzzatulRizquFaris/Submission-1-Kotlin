@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".DetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.submission1kotlin.MainActivityUI" />
+        </activity>
+        <activity android:name=".MainActivityUI">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
