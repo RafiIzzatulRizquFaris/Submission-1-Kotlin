@@ -1,7 +1,5 @@
 package com.example.submission1kotlin
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.content.Context
 import android.util.Log
 import android.view.View
@@ -18,7 +16,7 @@ class Adapter (private val context: Context, private val items: List<Item>, priv
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(ListAnko().createView(
         AnkoContext.Companion.create(context)))
     private var onAttach: Boolean = true
-    private val duration: Long = 500
+//    private val duration: Long = 500
 
     override fun getItemCount(): Int {
         return items.size

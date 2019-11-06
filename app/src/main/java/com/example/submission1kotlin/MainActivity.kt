@@ -18,7 +18,7 @@ class MainActivityUI : AppCompatActivity() {
         getData()
         mainActivity.recyclerView!!.layoutManager = LinearLayoutManager(this)
         mainActivity.recyclerView!!.adapter = Adapter(this, items){
-            startActivity<DetailActivity>("Detail_key" to items.indexOf(it))
+            startActivity<DetailActivity>("detail" to it)
         }
     }
 

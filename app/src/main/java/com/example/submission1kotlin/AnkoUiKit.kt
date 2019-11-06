@@ -2,14 +2,25 @@ package com.example.submission1kotlin
 
 import android.content.Context
 import android.graphics.Typeface
+import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.AppBarLayout.LayoutParams.SCROLL_FLAG_ENTER_ALWAYS
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.appbar.CollapsingToolbarLayout.LayoutParams.COLLAPSE_MODE_PARALLAX
+import com.google.android.material.appbar.CollapsingToolbarLayout.LayoutParams.COLLAPSE_MODE_PIN
 import org.jetbrains.anko.*
 import org.jetbrains.anko.cardview.v7.cardView
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.design.appBarLayout
+import org.jetbrains.anko.design.collapsingToolbarLayout
+import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.recyclerview.v7.recyclerView
+import org.jetbrains.anko.support.v4.nestedScrollView
 
 class AnkoUiKit : AnkoComponent<MainActivityUI> {
     var recyclerView: RecyclerView? = null
@@ -23,6 +34,7 @@ class AnkoUiKit : AnkoComponent<MainActivityUI> {
         }
     }
 }
+
 
 class ListAnko : AnkoComponent<Context>{
     lateinit var image: ImageView
